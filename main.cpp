@@ -31,7 +31,31 @@ int main() {
 	set<int> answerSet2(ans.begin(), ans.end());
 	assert(answerSet2 == soln);
 
-	// write your own tests here!
+
+ // Test: Single number
+    values = {42};
+    ans = biggest_divisible_conglomerate(values);
+    cout << "input: " << vec_to_string(values) << endl;
+    cout << "output: " << vec_to_string(ans) << endl << endl;
+    assert(ans == values);
+
+    // Test: No divisible pairs
+    values = {7, 11, 17, 3};
+    ans = biggest_divisible_conglomerate(values);
+    cout << "input: " << vec_to_string(values) << endl;
+    cout << "output: " << vec_to_string(ans) << endl << endl;
+    assert(ans.size() == 1);
+
+    // Test: Multiple valid conglomerates
+    values = {2, 3, 6, 12, 24};
+    ans = biggest_divisible_conglomerate(values);
+    cout << "input: " << vec_to_string(values) << endl;
+    cout << "output: " << vec_to_string(ans) << endl << endl;
+    assert(ans.size() >= 3);
+	
+
+
+
 
 	return 0;
 }
